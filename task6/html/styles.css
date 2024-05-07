@@ -31,3 +31,13 @@ a {
     flex-basis: 100%;
     height: 0
 }
+.editor {
+    display: flex;￼
+    flex-direction: column;
+    width: 20vw;
+    flex-direction: column;
+}
+
+.title {
+    height: 7vh;
+}

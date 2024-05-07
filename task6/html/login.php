@@ -2,8 +2,8 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
-    $username = isempty(getenv("BLOG_USERNAME")) ? getenv("BLOG_USERNAME") : "admin";
-    $password = isempty(getenv("BLOG_PASSWORD")) ? getenv("BLOG_PASSWORD") : "admin";
+    $username = "admin";
+    $password = "admin";
 
     if ($_POST['name'] == $username && $_POST['password'] == $password) {
         $_SESSION['name'] = $username;

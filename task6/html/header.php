@@ -3,9 +3,10 @@
 <div class="header">
     <ul>
         <li><a href="index.php">Blog</a></li>
-        <li><a href="new.php">New</a></li>
 <?php
 if (isset($_SESSION['name'])) {
+    echo "<li><a href='new.php'>New</a></li>";
+    echo "<li><a href='edit.php'>Edit</a></li>";
     echo "<li><a href='logout.php'>Logout</a></li>";
 }
 else {

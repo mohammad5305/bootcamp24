@@ -4,8 +4,5 @@ services:
     restart: always
     volumes:
       - ./html:/var/www/html
-    environment: 
-      - BLOG_USERNAME=test
-      - BLOG_PASSWORD=test
     ports:
       - "80:8080"

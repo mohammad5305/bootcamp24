@@ -7,9 +7,9 @@
   <?php
     include 'header.php';
     require 'db.php';
-    $db = new SQLite3('blog.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
+    $db = new SQLite3('/tmp/blog.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
 
-    $query = $db->query("SELECT * FROM blogs");
+    $query = $db->query("SELECT * FROM blogs ORDER BY \"time\" DESC");
 
     while ($row = $query->fetchArray(SQLITE3_ASSOC)){
         $title = $row['title'];
@@ -30,12 +30,6 @@ HTML;
     }
     $db->close();
 ?>
-<div class="post">
-    <h2 class="title">Title</h2>
-    <span class="date">2023-11-24</span>
-    <div class="break"></div>
-    <p class="content">content...</p>
-</div>
  </body>
  
 </html>
