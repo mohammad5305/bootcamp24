@@ -1,6 +1,6 @@
 <html>
  <head>
-    <title>PHP-Test</title>
+    <title>Search data</title>
     <link rel="stylesheet" href="styles.css">
  </head>
  <body>
@@ -38,14 +38,10 @@
         }
     }
     echo "<div class='btns'>";
-    echo sprintf("<a href='/?page=%s%s'><button>Previos page</button></a>", (int)$_GET['page'] - 1, $params);
+    echo sprintf("<a href='/?page=%s%s'><button>Previos page</button></a>", (int)$_GET['page'] > 0 ? (int)$_GET['page'] - 1 : 0, $params);
     echo sprintf("<a href='/?page=%s%s'><button>Next page</button></a>", (int)$_GET['page'] + 1, $params);
     echo "</div>";
 
-    // Free resultset
-    pg_free_result($result);
-
-    // Closing connection
     pg_close($dbconn);
 
 ?>

@@ -1,0 +1,8 @@
+services:
+  api:
+    build: .
+    restart: always
+    volumes:
+      - ./html:/var/www/html
+    ports:
+      - "80:8080"
