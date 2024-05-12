@@ -1,0 +1,12 @@
+{
+    "name": "mohammad/task9",
+    "authors": [
+        {
+            "name": "mohammad5305",
+            "email": "mohammad.bajalal546@gmail.com"
+        }
+    ],
+    "require": {
+        "fakerphp/faker": "^1.23"
+    }
+}
